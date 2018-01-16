@@ -1,6 +1,7 @@
 package model
 
+// message send back to user
 type UserResponse struct {
-	ErrorCode string
-	Message   string
+	Code    string `json:"code"`
+	Message string `json:"message"`
 }
