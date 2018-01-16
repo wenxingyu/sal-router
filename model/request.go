@@ -22,6 +22,7 @@ func From(r *http.Request) (UserRequest, error) {
 	contentType := r.Header.Get("Content-Type")
 	if contentType == "application/json" {
 		body, err := ioutil.ReadAll(r.Body)
+		defer r.Body.Close()
 		if err != nil {
 			log.Print("failed to read request")
 		}
