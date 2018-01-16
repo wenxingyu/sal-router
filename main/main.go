@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"log"
 	"encoding/json"
-	"github.com/sal-router/model"
+	"../model"
 	"io/ioutil"
 )
 
